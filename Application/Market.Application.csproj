@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Enums\**" />
+    <Compile Remove="Services\System\**" />
+    <EmbeddedResource Remove="Enums\**" />
+    <EmbeddedResource Remove="Services\System\**" />
+    <None Remove="Enums\**" />
+    <None Remove="Services\System\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Market.Core.csproj" />
+    <ProjectReference Include="..\Infrastracture\Market.Infrastracture.csproj" />
+  </ItemGroup>
+
+</Project>
